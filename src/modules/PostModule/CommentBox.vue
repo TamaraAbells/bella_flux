@@ -4,7 +4,7 @@
       <div class="flex flex-col justify-start gap-2">
         <div class="flex justify-start items-center gap-2">
           <h2 class="uppercase text-2xl font-bold whitespace-nowrap">LEAVE A REPLY</h2>
-          <hr class="w-full h-1.5 bg-red-500 border-0">
+          <hr class="w-full h-1.5 bg-orange-500 border-0">
         </div>
         <div class="flex flex-col gap-2">
           <label for="comment">Comment <span class="text-red-600">*</span></label>

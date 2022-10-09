@@ -11,12 +11,24 @@
         </div>
         <nav class="text-xs font-semibold uppercase">
           <ul class="flex justify-center items-center gap-10">
-            <li>NEWS</li>
-            <li>MUSIC</li>
-            <li>WEDDINGS</li>
-            <li>STYLE</li>
-            <li>RELATIONSHIPS</li>
-            <li>NOLLYWOOD EVENTS</li>
+            <li class="hover:underline hover:text-orange-500 pt-3">
+              <router-link to="/category/news">NEWS</router-link>
+            </li>
+            <li class="hover:underline hover:text-orange-500 pt-3">
+              <router-link to="/category/music">MUSIC</router-link>
+            </li>
+          <li class="hover:underline hover:text-orange-500 pt-3">
+            <router-link to="/category/weddings">WEDDINGS</router-link>
+            </li>
+            <li class="hover:underline hover:text-orange-500 pt-3">
+              <router-link to="/category/style">STYLE</router-link>
+            </li>
+            <li class="hover:underline hover:text-orange-500 pt-3">
+              <router-link to="/category/relationships">RELATIONSHIPS</router-link>
+            </li>
+            <li class="hover:underline hover:text-orange-500 pt-3">
+              <router-link to="/category/events">NOLLYWOOD EVENTS</router-link>
+            </li>
           </ul>
         </nav>
       </div>
@@ -26,7 +38,9 @@
           BellaNaija is not responsible for the content of external sites and news culled therefrom.
         </p>
         <div>
-          <img :src="require('../assets/logo-word-black-small@2x.png')" class="h-10" />
+          <router-link to="/">
+            <img :src="require('../assets/logo-word-black-small@2x.png')" class="h-10" />
+          </router-link>
         </div>
       </div>
     </div>

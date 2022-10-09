@@ -11,19 +11,21 @@
       </div>
     </div>
     <div class="flex flex-col justify-center items-center gap-5 divide-y divide-gray-200">
-      <div v-for="item in items" :key="item.id" class="pt-5">
-        <div class="flex justify-center">
-          <div class="relative flex flex-col justify-center items-center gap-2 w-80 cursor-pointer hover:text-red-500">
-            <img
-              :src="item.image"
-              class="rounded-full w-48 h-48 cursor-pointer"
-            />
-            <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out" style="background-color: rgba(251, 251, 251, 0.2)"></div>
-            <h4 class="font-normal text-lg tracking-6 leading-6 text-center">
-              {{ item.title }}
-            </h4>
+      <div v-for="item, i in items" :key="item.id" class="pt-5">
+        <router-link :to="`/post/${item.id}`">
+          <div class="flex justify-center">
+            <div class="relative flex flex-col justify-center items-center gap-2 w-80 cursor-pointer hover:text-red-500">
+              <img
+                :src="require(`../assets/posts/trending/${i}.jpeg`)"
+                class="rounded-full w-48 h-48 cursor-pointer"
+              />
+              <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+              <h4 class="font-normal text-lg tracking-6 leading-6 text-center">
+                {{ item.title }}
+              </h4>
+            </div>
           </div>
-        </div>
+        </router-link>
       </div>
     </div>
     <div class="mt-36 flex justify-end self-end cursor-pointer hover:bg-orange-500 hover:rounded-md">

@@ -10,9 +10,11 @@
       </div>
       <div>
         <div v-for="item in items" :key="item.id" class="py-2">
-          <p class="text-sm text-black leading-5 tracking-5 pt-5 border-t cursor-pointer hover:text-red-500 hover:underline">
-            {{ item.title }}
-          </p>
+          <router-link :to="`/post/${item.id}`">
+            <p class="text-sm text-black leading-5 tracking-5 pt-5 border-t cursor-pointer hover:text-red-500 hover:underline">
+              {{ item.title }}
+            </p>
+          </router-link>
         </div>
       </div>
     </div>

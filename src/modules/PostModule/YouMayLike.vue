@@ -8,7 +8,7 @@
       <div class="w-full flex justify-between items-center gap-10">
         <div v-for="item in items" :key="item.id">
           <div class="flex flex-col justify-center items-center gap-5">
-            <img class="w-80 h-60" :src="item.image" />
+            <img class="w-80 h-60" :src="require(`../../assets/posts/posts/${item.id}.jpeg`)" />
             <p class="text-black text-sm font-bold leading-5">
               {{ item.title }}
             </p>

@@ -8,9 +8,11 @@
       </div>
       <div>
         <div v-for="comment in comments" :key="comment.id" class="py-1">
-          <p class="text-sm text-black leading-5 tracking-5 pr-10 pb-2 border-b cursor-pointer hover:text-red-500 hover:underline">
-            {{ comment.body }}
-          </p>
+          <router-link :to="`/post/${comment.id}`">
+            <p class="text-sm text-black leading-5 tracking-5 pr-10 pb-2 border-b cursor-pointer hover:text-red-500 hover:underline">
+              {{ comment.body }}
+            </p>
+          </router-link>
         </div>
       </div>
     </div>
